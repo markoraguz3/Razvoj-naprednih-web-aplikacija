@@ -1,0 +1,32 @@
+html{ font-size: 22px;}
+
+
+
+.grid-container {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr 1fr;
+  grid-template-rows: 1fr 10fr 1fr;
+  gap: 0px 0px;
+  grid-template-areas:
+    "header header header header"
+    "nav main main main"
+    "nav footer footer footer";
+}
+.header { 
+  grid-area: header;
+  border: 1px solid black;
+  height: 40px;
+  }
+.nav { 
+  grid-area: nav; 
+  border: 1px solid black;
+  height: 500px;
+}
+.main { 
+  grid-area: main; 
+  border: 1px solid black;
+}
+.footer {
+  grid-area: footer; 
+  border: 1px solid black;
+}
