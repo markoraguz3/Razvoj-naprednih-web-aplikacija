@@ -1,32 +1,62 @@
-html{ font-size: 22px;}
-
-
-
-.grid-container {
-  display: grid;
-  grid-template-columns: 1fr 1fr 1fr 1fr;
-  grid-template-rows: 1fr 10fr 1fr;
-  gap: 0px 0px;
-  grid-template-areas:
-    "header header header header"
-    "nav main main main"
-    "nav footer footer footer";
+*{
+    box-sizing: border-box;
 }
-.header { 
-  grid-area: header;
-  border: 1px solid black;
-  height: 40px;
+
+.body{
+    margin: 0;
+}
+
+.logo{
+    width: 75%;
+    float: left;
+    border: 1px solid black;
+}
+
+.login{
+    width: 25%;
+    float: right;
+    border: 1px solid black;
+}
+
+.top-nav{
+    width: 100%;
+    position: relative;
+    border: 1px solid black;
+}
+
+.content{
+    width: 85%;
+    height: 100vh;
+    float: left;
+    border: 1px solid black;
+}
+.add{
+    width: 15%;
+    height: 100vh;
+    float: right;
+    border: 1px solid black;
+}
+
+.footer{
+    width: 100%;
+    left: 0;
+    bottom: 0;
+    border: 1px solid black;
+}
+
+@media screen and (max-width:800px) {
+    .logo,
+    .login, 
+    .content,
+    .top-nav, 
+    .add,
+    .footer {
+      width:100%; 
+    }
   }
-.nav { 
-  grid-area: nav; 
-  border: 1px solid black;
-  height: 500px;
-}
-.main { 
-  grid-area: main; 
-  border: 1px solid black;
-}
-.footer {
-  grid-area: footer; 
-  border: 1px solid black;
+
+@media screen and (max-width:800px) {
+    .add{
+        height: 100px;
+    }
 }
