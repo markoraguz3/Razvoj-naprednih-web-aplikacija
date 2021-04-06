@@ -1,62 +1,128 @@
-*{
-    box-sizing: border-box;
+@import url("https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&display=swap");
+
+* {
+   box-sizing: border-box;
+   margin: 0;
+   padding: 0;
+   font-family: "Lato", sans-serif;
+}
+body {
+   height: 100vh;
+   background: lightgray;
 }
 
-.body{
-    margin: 0;
+.row {
+   display: flex;
+   text-align: center;
+   width: 100%;
+}
+.logo {
+   background: dimgray;
+   color: whitesmoke;
+   display: flex;
+   justify-content: center;
+   align-items: center;
+   height: 6vh;
+   width: 60%;
+}
+.login {
+   height: 6vh;
+   background: dimgray;
+   color: white;
+   display: flex;
+   justify-content: center;
+   align-items: center;
+   width: 40%;
+}
+.top-nav {
+   display: flex;
+   justify-content: center;
+   align-items: center;
+   height: 7vh;
+   background: gray;
+   color: whitesmoke;
 }
 
-.logo{
-    width: 75%;
-    float: left;
-    border: 1px solid black;
+.content {
+   min-height: 80vh;
+   max-height: 80vh;
+   overflow-y: auto;
+   width: 90%;
+   background: white;
+   padding: 0 1rem;
+}
+.content .text {
+   text-align: left;
+   margin: 2rem 0;
+}
+.content .text p {
+   margin: 1rem 0;
+}
+.content table {
+   font-family: arial, sans-serif;
+   border-collapse: collapse;
+   width: 100%;
+   margin: 2rem 0;
 }
 
-.login{
-    width: 25%;
-    float: right;
-    border: 1px solid black;
+.content td,
+.content th {
+   border: 1px solid #dddddd;
+   text-align: left;
+   padding: 8px;
 }
 
-.top-nav{
-    width: 100%;
-    position: relative;
-    border: 1px solid black;
+.content tr:nth-child(even) {
+   background-color: #dddddd;
+}
+.content .images {
+   display: flex;
+   justify-content: space-around;
+   margin: 2rem 0;
+}
+.content .images img {
+   height: 100px;
+   width: 100px;
 }
 
-.content{
-    width: 85%;
-    height: 100vh;
-    float: left;
-    border: 1px solid black;
+.add {
+   display: flex;
+   flex-direction: column;
+   padding: 2rem 1rem;
 }
-.add{
-    width: 15%;
-    height: 100vh;
-    float: right;
-    border: 1px solid black;
+.add h3 {
+   margin: 2rem 0 1rem;
+}
+.add span {
+   margin-top: 0.7rem;
+}
+.footer {
+   height: 7vh;
+   display: flex;
+   justify-content: center;
+   align-items: center;
+   background: gray;
+   color: whitesmoke;
+}
+.footer a {
+   width: 3rem;
+   text-align: center;
+   margin: 0 0.5rem;
+   text-decoration: none;
+   color: white;
 }
 
-.footer{
-    width: 100%;
-    left: 0;
-    bottom: 0;
-    border: 1px solid black;
-}
+/* Table styling */
 
-@media screen and (max-width:800px) {
-    .logo,
-    .login, 
-    .content,
-    .top-nav, 
-    .add,
-    .footer {
-      width:100%; 
-    }
-  }
-
-@media screen and (max-width:800px) {
-    .add{
-        height: 100px;
-    }
+@media screen and (max-width: 800px) {
+   * {
+      width: 100% !important;
+   }
+   .row {
+      flex-direction: column;
+   }
+   .content {
+      min-height: 0;
+      max-height: fit-content;
+   }
 }
