@@ -49,7 +49,6 @@
                   earum quas iure. Eos, omnis?
                </p> -->
                <h2>Naslov 2</h2>
-               <button id="mojid">asdasd</button>
                <p>
                   Lorem ipsum dolor, sit amet consectetur adipisicing elit.
                   Earum minima a corporis perspiciatis, reprehenderit ea, error
