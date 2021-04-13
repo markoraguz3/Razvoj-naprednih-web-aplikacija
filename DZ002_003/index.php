@@ -12,10 +12,10 @@
   <script>
     async function getPosts()
     {
-      let str = $('#searchInput').val()
+      let str = $('#searchInput').val();
 
       let {data} = await axios.get("country_search.php",{params: {s: str}});
-      $('#resultDiv').html(data);
+      $('#txtHint').html(data);
 
     }
     $(document).ready(function(){
