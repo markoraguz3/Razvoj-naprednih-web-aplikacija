@@ -1,0 +1,36 @@
+<html>
+<head>
+<title>Currency Converter</title>
+<style>
+  body {
+    background-color: gray;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    padding-top: 15rem;
+  }
+  form {
+    background-color: darkcyan;
+    color: white;
+    padding: 2rem 4rem;
+  }
+  form p input {
+    margin: 0.5rem 0;
+  }
+  b {
+    margin: 1rem 0;
+  }
+</style>
+</head>
+<body>
+<b><font size="4">BAM / EUR:</font></b>
+<form name="form" method="POST" action="client.php">
+<p>Unesite vrijednost:  <br> <input name="value" type="text" id="value" size="15"></p>
+<select name="currency" id="currency">
+  <option value="toEur">Convert to EUR</option>
+  <option value="toBam">Convert to BAM</option>
+</select>
+<p><input type="submit" name="Submit" value="Convert"></p></form>
+<body>
+</html>
